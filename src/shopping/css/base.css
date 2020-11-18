@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+em,i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 14px;
+
+
+}
+/*input,button {*/
+/*  border: 0;*/
+/*  outline: none;*/
+/*}*/

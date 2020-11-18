@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>样式</title>
+</head>
+<body>
+<div class="red"></div>
+<div class="green"></div>
+<div class="red"></div>
+<div class="green font">刘德华</div>
+<br>
+
+<div>
+  <a href="#">手机 电话卡</a>
+  <a href="#">电视 盒子</a>
+  <a href="#">笔记本 平板</a>
+  <a href="#">出行 穿戴</a>
+  <a href="#">智能 路由器</a>
+  <a href="#">健康 儿童</a>
+  <a href="#">耳机 音响</a>
+</div>
+<br>
+
+<div class="nav">
+  <a href="#">新浪导航</a>
+  <a href="#">手机新浪网</a>
+  <a href="#">移动客户端</a>
+  <a href="#">微博</a>
+  <a href="#">小怪兽</a>
+</div>
+<br>
+
+<div class="box1">
+  <div>
+    <img src="../assets/img/tupian1.jpg" alt="" class="tupian">
+  </div>
+  <div class="pinglun">
+    这是一段关于图片的评论
+  </div>
+  <div class="shijian">
+    评论人数 评论时间
+  </div>
+  <div class="zhengwen">
+    呀呀呀呀呀
+  </div>
+</div>
+<br>
+<br>
+
+<div class="pinyou12">
+  <h3>品优快报</h3>
+  <ul>
+    <li>【特惠】1</li>
+    <li>【特惠】2</li>
+    <li>【特惠】3</li>
+    <li>【特惠】4</li>
+    <li>【特惠】5</li>
+  </ul>
+</div>
+<br>
+<br>
+<br>
+<div class="box2">
+  <div class="left">左边</div>
+  <div class="right">
+    <div>
+     <div><img src="../assets/img/tupian1.jpg" alt="" class="xiaotu">
+     <div class="hot">热门</div>
+     </div>
+      <div>
+        文字介绍
+      </div>
+    </div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  </div>
+</div>
+<br>
+<br>
+<div >
+  <div class="tb">
+    <img src="../assets/img/tupian2.jpg" alt="">
+    <a href="#" class="pre">44</a>
+    <a href="#" class="next"> 88</a>
+  </div>
+</div>
+
+<div class="tudou">
+<!--  <div class="mask"></div>-->
+  <img src="../assets/img/tupian1.jpg" alt="" >
+
+</div>
+</body>
+</html>
+<style>
+  .tudou {
+    width: 444px;
+    height: 320px;
+    position: relative;
+  }
+  .tudou img{
+    width: 100%;
+    height: 100%;
+  }
+  .tudou::before {
+    content: '';
+    width: 444px;
+    height: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3) ;
+    display: none;
+  }
+  .tudou:hover::before {
+    display: block;
+  }
+
+
+  .tb .next {
+    float: right;
+    position: absolute;
+    right: 0;
+    top:0;
+    margin-top: 130px;
+    width: 50px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.3);
+    border-top-left-radius:15px ;
+    border-bottom-left-radius: 15px;
+    color: purple;
+  }
+  .tb .pre {
+    float: left;
+    position: absolute;
+    left: 0;
+    top:0;
+    margin-top: 130px;
+    width: 50px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.3);
+    border-top-right-radius:15px ;
+    border-bottom-right-radius: 15px;
+    color: purple;
+  }
+  .tb {
+    position: relative;
+    width: 520px;
+    height: 280px;
+    background-color: pink;
+    margin: 100px auto;
+
+  }
+  .zhezhao {
+    position: relative;
+    width: 520px;
+    height: 280px;
+    color: rgba(0,0,0,0.3);
+    color: rgba(0,0,0,0.3);
+    /*display: none;*/
+  }
+  .zhezhao:hover {
+    /*display: none;*/
+  }
+
+  .tb >img {
+    width: 520px;
+    height: 280px;
+  }
+  .hot {
+    position: absolute;
+    font-style: normal;
+    width: 50px;
+    height: 30px;
+    border: 1px solid orange;
+    font-size: 12px;
+    margin-right: -5px;
+    margin-top: 20px;
+
+  }
+  .box2{
+    width: 1226px;
+    height: 615px;
+    background-color:cornflowerblue;
+  }
+  .left{
+    float: left;
+    width: 234px;
+    height: 615px;
+    background-color: mediumpurple;
+  }
+  .right {
+    float: right;
+    width: 992px;
+    height: 615px;
+    background-color: #42b983;
+  }
+  .right>div{
+    float: left;
+    width: 234px;
+    height: 300px;
+    background-color: pink;
+    margin-left: 14px;
+    margin-bottom: 14px;
+  }
+  .xiaotu {
+
+    width: 100%;
+
+  }
+  .pinyou12 {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+  }
+  .pinyou12 h3{
+    width: 400px;
+   border-bottom:1px solid black;
+    font-weight: 700;
+    text-align: center;
+  }
+  ul li {
+    list-style: none;
+    line-height: 23px;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  .box1 {
+    height: 415px;
+    width: 298px;
+    background-color: pink;
+    margin: 100px auto;
+  }
+  .tupian {
+    width: 100%;
+    height: 200px;
+    margin:0 0 10px;
+  }
+  .pinglun {
+    font-size: 14px;
+    color: black;
+    margin:20px 0;
+    padding: 0 28px;
+  }
+  .shijian {
+    text-indent: 4em;
+    color: #999999;
+    font-size: 12px;
+    margin:20px 0;
+  }
+  .zhengwen {
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    margin:20px 0;
+    text-indent: 2em;
+  }
+  .nav {
+    height: 41px;
+    background-color: #fcfcfc;
+    border-top: 3px solid #ff8500;
+    border-bottom:1px solid #edeef0 ;
+    color: #4c4c4c;
+    font-size: 14px;
+  }
+  .nav a {
+    display: inline;
+    height: 41px;
+    padding: 10px;
+
+  }
+  .nav a:hover {
+    color: cornflowerblue;
+    background-color: orange;
+
+  }
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.font {
+  font-size: 25px;
+}
+div a {
+  display: block;
+  width: 230px;
+  height: 40px;
+  background-color: #55585a;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  text-indent: 2em;
+  line-height: 40px;
+}
+a:hover {
+  background-color: orangered;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border:2px solid green;
+}
+
+</style>

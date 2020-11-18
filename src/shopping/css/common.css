@@ -1,0 +1,263 @@
+/*!*声明字体图标*!*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?9f7p7u');
+  src:  url('fonts/icomoon.eot?9f7p7u#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?9f7p7u') format('truetype'),
+  url('fonts/icomoon.woff?9f7p7u') format('woff'),
+  url('fonts/icomoon.svg?9f7p7u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.fl {
+  float:left;
+}
+  .fl span {
+    line-height: 31px;
+    font-size: 12px;
+    color:#666666;
+  }
+  .fl span a{
+    color: #c81623;
+    font-size: 14px;
+  }
+.fr {
+  float: right;
+}
+.shortcut {
+  height: 31px;
+  line-height: 31px;
+  background-color: #f1f1f1;
+}
+.shortcut ul li {
+  color: #666666;
+  font-size: 14px;
+  float: right;
+  line-height: 31px;
+  padding-left: 10px;
+}
+/*.arrow-icon::after{*/
+/*  content: url("\ctrl");*/
+/*  font-size: 14px;*/
+/*}*/
+.header {
+  position: relative;
+  height: 105px;
+  width: 1200px;
+  /*background-color: pink;*/
+  margin: 10px auto;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  width: 180px;
+  height: 80px;
+  /*background-color: skyblue;*/
+}
+.logo img {
+ margin-top: 10px;
+}
+.logo span input[type=text] {
+  float: left;
+  position: absolute;
+  margin-left: 150px;
+  width: 547px;
+  height: 32px;
+  border: 2px solid #B80000;
+  top: 20px;
+  text-indent: 1em;
+  font-size: 14px;
+}
+.logo span input[type=button] {
+  position: absolute;
+  width: 92px;
+  height: 32px;
+  background-color: #B80000;
+  font-size: 16px;
+  font-weight: 700;
+  top:20px;
+  margin-left: 605px;
+  border-radius: 5px;
+  color: white;
+}
+.search {
+  margin-left: 310px;
+  padding-top: 65px;
+}
+.search ul li {
+  float: left;
+  font-size: 12px;
+  color: #666666;
+  padding-left: 20px;
+}
+.search ul li:first-child {
+  color: red;
+}
+.car {
+  margin-top: -30px;
+  margin-left: 1000px;
+  width: 145px;
+  height: 32px;
+  background-color:	#f7f7f7;
+  border: 1px solid #dfdfdf;
+  font-size: 14px;
+  text-align: center;
+}
+.car span {
+  font-size: 12px;
+  color: #666666;
+  line-height: 32px;
+}
+.car img {
+  vertical-align: middle;
+  margin-top: -4px;
+}
+.count {
+  position: absolute;
+  top:32px;
+  right: 80px;
+  height: 14px;
+  color: #fff;
+  background-color: #e60012;
+  padding: 0 5px;
+  border-radius: 5px 5px 5px 0;
+}
+.nav {
+  height: 47px;
+  border-bottom: 2px solid #c81623;
+}
+.nav .dropdown {
+  float: left;
+  width: 210px;
+  height: 45px;
+  background-color: #B80000;
+}
+.nav .navitems {
+  float: left;
+}
+.dt {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-size: 16px;
+}
+.dd {
+  width: 210px;
+  height: 465px;
+  background-color: #c81623;
+}
+.dd ul li {
+  height: 31px;
+  line-height: 31px;
+  margin-left: 2px;
+  padding-left: 10px;
+}
+.dd ul li:hover {
+  background-color: #fff;
+}
+
+.dd ul li:hover>a {
+  color:  #c81623;
+}
+.dd ul li a {
+  font-size: 14px;
+  color: #fff;
+}
+.dd ul li::after{
+  content: '\ea50';
+  font-family: icomoon;
+  color: #fff;
+  margin-right: 10px;
+}
+.navitems ul li {
+  float: left;
+}
+.navitems ul li a{
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  padding:0 25px ;
+  font-size: 16px;
+  color:#999999;
+}
+.footer {
+  height: 415px;
+  background-color: #f5f5f5;
+  padding-top: 30px;
+
+}
+.mod_service {
+  height: 80px;
+  border-bottom: 1px solid #cccccc;
+}
+.mod_service ul li {
+  float: left;
+  height: 50px;
+  width: 300px;
+  padding-left: 35px;
+}
+.mod_service ul li h5{
+  float: left;
+  height: 50px;
+  width: 50px;
+  margin-right: 8px;
+  background: url("../images/icons.png") no-repeat -252px -4px;
+}
+.mod_text {
+  font-size: 14px;
+}
+.mod_text p {
+  font-size: 12px;
+}
+.mod_help {
+  height: 185px;
+  border-bottom: 1px solid #cccccc;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+.mod_help dl {
+  float: left;
+  width: 200px;
+  color:#ccc;
+}
+.mod_help dl:last-child {
+  width: 90px;
+  text-align: center;
+}
+.mod_help dl dt{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.mod_help dl dd {
+  font-size: 12px;
+  padding-top: 5px;
+}
+.mod_help dl dd a {
+  color:#909090;
+}
+.mod_help dl dt a {
+  color:#686868;
+}
+.mod_copyright{
+  text-align: center;
+  padding-top: 20px;
+}
+.links {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.copyright {
+  line-height: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+

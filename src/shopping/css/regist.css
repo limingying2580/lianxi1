@@ -1,0 +1,66 @@
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  height: 84px;
+  border-bottom: 2px solid #c81623;
+}
+.logo {
+  padding-top: 18px;
+}
+.register {
+  height: 522px;
+  border: 1px solid #cccccc;
+  margin-top: 20px;
+}
+.shang {
+  height: 42px;
+  border-bottom: 1px solid #cccccc;
+  background-color: #cccccc;
+}
+.register h3 {
+  float: left;
+  font-size: 16px;
+  line-height: 42px;
+  padding-left: 10px;
+
+}
+.register span {
+  float: right;
+  line-height: 42px;
+}
+
+.biaodan {
+  margin: 50px auto 0;
+  width: 600px;
+}
+.biaodan p {
+  padding-bottom: 20px;
+}
+.biaodan label {
+  display: inline-block;
+  width: 160px;
+  text-align: right;
+}
+.biaodan input{
+  width: 242px;
+  height: 37px;
+  border: 1px solid #cccccc;
+}
+
+.mod_copyright{
+  text-align: center;
+  padding-top: 20px;
+}
+.links {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.copyright {
+  line-height: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+

@@ -1,0 +1,146 @@
+.main {
+  width: 980px;
+  height: 455px;
+  margin-left: 220px;
+  margin-top: 10px;
+}
+.focus {
+  width: 721px;
+  height: 455px;
+  float: left;
+}
+.newsflash {
+  float: right;
+  width: 250px;
+  height: 455px;
+}
+.news {
+  height: 165px;
+
+}
+.news1 {
+  height: 35px;
+  border-bottom: 1px solid #666666;
+}
+.news1 p {
+  float: left;
+  height: 33px;
+  font-size: 14px;
+  color: #333333;
+  padding-left: 15px;
+}
+.news1 .more{
+  float: right;
+  font-size: 14px;
+  color: #333333;
+  line-height: 16px;
+  padding-right: 15px;
+}
+.newsflash ul {
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 13px;
+  color: #666666;
+}
+.lifeservice {
+  height: 209px;
+  border-top: 0;
+
+}
+.lifeservice ul li {
+  float: left;
+  height: 71px;
+  width: 63px;
+  border: 1px solid #666666;
+}
+.lifeservice ul {
+  border-top: 0;
+  width: 280px;
+  overflow: hidden;
+  margin-top: -20px;
+  margin-left: -10px;
+}
+.bargin {
+margin-top: 30px;
+
+}
+
+.recom {
+  height: 163px;
+  margin-top: 12px;
+}
+.recom_hd {
+  float: left;
+  height: 142px;
+  width: 205px;
+  background-color: #555555;
+  text-align: center;
+  padding-top: 35px;
+  font-size: 16px;
+  color: #ffffff;
+  font-width: 700;
+}
+.recom_bd {
+  float: left;
+}
+.recom_bd ul li {
+  float: left;
+}
+.box_hd{
+  height: 30px;
+  border-bottom:2px solid red ;
+}
+.box_hd h3 {
+  float: left;
+  color: #B80000;
+  font-size: 18px;
+  font-weight: 400;
+}
+.tab_list {
+  float: right;
+  line-height: 30px;
+}
+.tab_list ul li {
+  float: left;
+}
+.tab_list ul li a {
+  margin: 0 15px;
+}
+.floor .w {
+  margin-top: 30px;
+}
+.box_bd {
+  height: 361px;
+
+}
+.tab_list_item>div{
+  float: left;
+  height: 361px;
+}
+.col_210 {
+  width: 210px;
+  background-color: #f9f9f9;
+}
+.col_210 ul li {
+  float: left;
+  width: 85px;
+  height: 34px;
+  border-bottom: 1px solid #666666;
+  margin: 0 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 34px;
+}
+.col_210 ul li>a:hover{
+  color: red;
+}
+.col_329 {
+  width: 329px;
+}
+.col_221 {
+  width: 221px;
+  border-right: 1px solid #ccc;
+}
+.col_219 {
+  width: 219px;
+}
