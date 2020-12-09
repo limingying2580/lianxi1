@@ -14,11 +14,14 @@
   //
   // console.log("abd">"abc")
 
+
   // var c=6;
   // b=function (){
   //   return c;
   // }
   // console.log(c&&b())
+
+
 
   // (function  f(x,y){
   //   return (x+y)*(x+y);
@@ -27,6 +30,8 @@
   //   return x*x+y*y;
   // })(25,36)?console.log("(x+y)^2"):console.log("x^2+y^2")
 
+
+
   // var age =prompt("请输入年龄");
   // var str='今年'+age+'岁'
   // alert(str)
@@ -34,13 +39,323 @@
   // var age=2020-year;
   // alert('今年'+age+'岁');
 
-  var num1=prompt('数值一');
-  var num2=prompt('数值二');
-  var result=parseFloat(num1)+parseFloat(num2);
-  alert(result)
+
+
+  // var num1=prompt('数值一');
+  // var num2=prompt('数值二');
+  // var result=parseFloat(num1)+parseFloat(num2);
+  // alert(result)
+  // var score = prompt("请输入分数");
+  // if (score >=90) {
+  //   alert ("真棒");
+  // }
+  // else {
+  //   alert("加油");
+  // }
+
+
+  // var time = prompt("请输入数字");
+  // result = time <10 ? '0' + time :time;
+  // alert(result);
+  // var fruit = prompt("请输入水果");
+  // switch (fruit){
+  //   case '苹果' :
+  //     alert("35/斤");
+  //     break;
+  //   case '榴莲' :
+  //     alert("100/斤");
+  //     break;
+  //   default :
+  //     alert("无");
+  //     break;
+  // }
+
+
+  // for (var i = 1;i <= 10;i++) {
+  //   console.log(i);
+  // }
+  // var num=prompt("请输入人数");
+  // var sum=0;
+  // var average=0;
+  // for (var i = 1;i<= num ;i++){
+  //   var score=prompt('请输入第'+ i+'人的成绩');
+  //   sum =sum + parseFloat(score);
+  // }
+  // average=sum/num;
+  // alert(average);
 
 
 
+  // var str = '';
+  // for (var i=1;i<=5;i++){
+  //   str=str+'*';
+  // }
+  // console.log(str);
+  // var str='';
+  // for (var i=1 ;i<=5;i++) {
+  //   for (var j=5;j>=1;j--){
+  //     str=str+'*';
+  //   }
+  //   str=str+'\n';
+  // }
+  // console.log(str);
+
+
+
+  // var str='';
+  // for (var i=1;i<=10;i++) {
+  //   for (var j=i;j<=10;j++) {
+  //     str=str+'*';
+  //   }
+  //   str += '\n';
+  // }
+  // console.log (str);
+
+
+
+  // var str='';
+  // for (var i=1;i<=9;i++){
+  //   for (var j=1;j<=i;j++){
+  //     str += j+'*'+i+'='+i*j+'\t';
+  //   }
+  //   str+='\n';
+  // }
+  // console.log(str);
+
+
+
+  // var arr=['red','blue','green','yellow'];
+  // var str='';
+  // for (var i=0;i<arr.length;i++){
+  //   str+=arr[i]+'|';
+  // }
+  // console.log(str);
+  // var arr =[5,4,3,2,1];
+  // for (var i=0;i<=arr.length-1;i++) {
+  //   for(var j=0;j<=arr.length-i-1;j++) {
+  //     if (arr[j]>arr[j+1]) {
+  //       var temp=arr[j];
+  //       arr[j]=arr[j+1];
+  //       arr[j+1]=temp;
+  //     }
+  //   }
+  // }
+  // console.log(arr)
+
+
+
+
+  // function getSum(){
+  //   var sum=0;
+  //   for (var i=1;i<=100;i++){
+  //     sum=sum+i;
+  //   }
+  //   console.log(sum)
+  // }
+  // getSum();
+  // function cook(aru){
+  //   console.log(aru);
+  // }
+  // cook('土豆丝');
+  // cook('肘子');
+
+
+
+  // function getSum(sum1,sum2){
+  //   console.log(sum1+sum2)
+  // }
+  // getSum(1,3);
+  // function getResult(){
+  //   return 666;
+  // }
+  // getResult();
+  // console.log(getResult())
+
+
+
+  // arguments获取数组长度
+  // function getMax() {
+  //   var max=arguments[0];
+  //   for(var i=1;i<arguments.length;i++) {
+  //     if(arguments[i]>max) {
+  //       max =arguments[i];
+  //     }
+  //   }
+  //   return max;
+  // }
+  // console.log(getMax(1,2,3))
+  // console.log(getMax(1,2,3,4,5))
+  // console.log(getMax(11,2,34,444,5,100))
+
+
+
+  // 利用函数判断闰年
+  // function backDay(){
+  //   var year = prompt('请输入年');
+  //   if (isRunYear(year)) {
+  //     alert('29');
+  //   }
+  //   else {
+  //     alert('28');
+  //   }
+  // }
+  // backDay();
+  //
+  // function isRunYear(year){
+  //   var flag =false;
+  //   if(year%4 == 0&&year%100!=0 ||year%400==0) {
+  //     flag=true;
+  //   }
+  //   return flag;
+  // }
+
+
+
+  // 利用函数返回最大值
+ // var myMath= {
+ //     PI: 3.1415926,
+ //     max: function () {
+ //       var max = arguments[0];
+ //       for (var i = 1; i < arguments.length; i++) {
+ //         if (arguments[i] > max) {
+ //           max = arguments[i];
+ //         }
+ //       }
+ //       return max;
+ //     },
+ //   min: function (){
+ //     var min=arguments[0];
+ //     for(var i=1;i<arguments.length;i++) {
+ //       if(arguments[i]<min){
+ //         min = arguments[i];
+ //       }
+ //     }
+ //     return min;
+ //   }
+ // }
+ // console.log(myMath.PI);
+ // console.log(myMath.max(1,5,9));
+ //  console.log(myMath.min(1,5,9));
+
+
+  // 时间倒计时
+  // function  countDown(time) {
+  //   var nowTime =+new Date();
+  //   var inputTime =+new Date(time);
+  //   var times=(inputTime - nowTime)/1000;
+  //   var d=parseInt(times / 60 / 60 / 24);
+  //   // d=d<10?'0'+d:d;
+  //   var h=parseInt(times / 60 / 60 % 24);
+  //   // h=h<10?'0'+h:h;
+  //   var m=parseInt(times / 60 % 60);
+  //   // m=m<10?'0'+m:m;
+  //   var s=parseInt(times % 60);
+  //   // s=s<10?'0'+s:s;
+  //   return d + '天' + h + '时' + m + '分' + s +'秒';
+  // }
+  // console.log(countDown('2020-12-8 11:11:11'))
+  // var date =new Date();
+  // console.log(date);
+
+  // 删除数组
+  // var arr=[1500,1200,2000,2100,1800];
+  // var newArray=[];
+  // for(var i=0;i<arr.length;i++) {
+  //   if(arr[i]<2000){
+  //     newArray.push(arr[i]);
+  //   }
+  // }
+  // console.log(newArray);
+
+  // 翻转数组
+  // var arr=['pink','blue','red'];
+  // arr.reverse();
+  // console.log(arr);
+
+  // 冒泡排序 sort只能用个位数排序
+  // var arr1=[3,7,4,1];
+  // arr1.sort();
+  // console.log(arr1);
+  // 解决方案
+  // var arr1=[13,77,4,1,7];
+  // arr1.sort(function (a,b){
+  //   return a-b;//升序
+  // //  return b-a; 降序
+  // });
+  // console.log(arr1);
+
+  // 数组去重
+  // function unique(arr){
+  //   var newArr=[];
+  //   for(var i=0;i<arr.length;i++){
+  //     if(newArr.indexOf(arr[i])==-1){
+  //       newArr.push(arr[i]);
+  //     }
+  //   }
+  //   return newArr;
+  // }
+  // var demo=unique(['c','a','z','x','a','x','c','b']);
+  // console.log(demo);
+  // var demo1=unique(['blue','green','blue']);
+  // console.log(demo1);
+
+  // 数组转换成字符串
+  // var arr=[1,2,3];
+  // console.log(arr.toString());
+  // var  arr1=['green','blue','red'];
+  // console.log(arr1.join('-')); //green-blue-red
+
+  // 基本包装类型  简单包装成复杂，这样基本数据类型就有了属性和方法
+  // var str='andy';
+  // console.log(str.length);
+  // var temp =new String('andy');
+  // str = temp;
+  // temp = null;
+
+  // 查找字符位置
+  // var str='abcoefoxyozzopp';
+  // var index=str.indexOf('o');
+  // var num=0;
+  // while(index!==-1){
+  //   console.log(index);
+  //   num++;
+  //   index=str.indexOf('o',index+1);
+  // }
+  // console.log('o出现次数'+num);
+
+  // 统计字符并返回最多
+  // var str='abcoefoxyozzopp';
+  // var o={};
+  // for(var i=0;i<str.length;i++){
+  //   var chars =str.charAt(i);
+  //   if(o[chars]){
+  //     o[chars]++;
+  //   }else {
+  //     o[chars]=1;
+  //   }
+  // }
+  // console.log(o);
+  // var max=0;
+  // var ch='';
+  // for(var k in o){
+  //   if(o[k]>max) {
+  //     max=o[k];
+  //     ch=k;
+  //   }
+  // }
+  // console.log(max);
+  // console.log('最多的字符'+ch)
+
+  //替换
+  // var str1='abcoefoxyozzopp';
+  // while(str1.indexOf('o')!==-1){
+  //   str1=str1.replace('o','*');
+  // }
+  // console.log(str1);
+
+  //字符转换成数组
+  var str2='red,blue,green';
+  console.log(str2.split(','));
 
 </script>
 </body>
