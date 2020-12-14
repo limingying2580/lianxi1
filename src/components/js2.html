@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js练习</title>
+</head>
+<body>
+<!--<button onClick="alert('点我干嘛')">点击</button>-->
+</body>
+
+<script>
+
+  // function createDog(name,pinzhong,age){
+  //   var obj = new Object();{
+  //     obj.name=name;
+  //     obj.pinzhong=pinzhong;
+  //     obj.age=age;
+  //   }
+  //   return obj;
+  // }
+  // var dog1=createDog("小布","拉布拉多",5);
+  // var dog2=createDog("小白","法斗",5);
+  // var dog3=createDog("小金","金毛",5);
+  // console.log(dog3);
+
+  // 构造函数
+  function Person(name,age,gender){
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  };
+  var per = new Person("孙悟空",18,"男");
+  var per1 = new Person("猪八戒",20,"男");
+  var per2 = new Person("唐僧",16,"男");
+  var per3 = new Person("沙和尚",18,"男");
+  console.log(per);
+  console.log(per1);
+  console.log(per2);
+  console.log(per3);
+  // console.log(per instanceof Person)
+</script>
+</html>
