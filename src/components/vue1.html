@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue练习</title>
+</head>
+<body>
+<div id="app">
+<!--  <input type="button" value="v-on指令" @click="doIt">-->
+</div>
+</body>
+<script>
+  // 2的n次幂
+  // var n = parseInt(window.prompt('input'));
+  // var val = 1;
+  // for(var i = 0;i < n;i++){
+  //   val *= 2;
+  // }
+  // document.write(val);
+  // console.log(val)
+
+  // 阶乘
+  // var n = parseInt(window.prompt('input'));
+  // var mul = 1;
+  // for(var i = n;i > 1;i--){
+  //   mul *=i;
+  // }
+  // document.write(mul);
+
+  // 斐波拉契数列
+  // var n = parseInt(window.prompt('输入大于2的数'));
+  // var first = 1,
+  //   second = 1 ,
+  //   third;
+  // for (var i = 0;i <n - 2;i ++){
+  //   third = first + second;
+  //   first = second
+  //   second = third;
+  // }
+  // document.write(third);
+
+  // 判断质数
+
+  // 函数之动物叫声
+  // function  scream(animal) {
+  //   switch (animal){
+  //     case "dog":
+  //       document.write('wang!')
+  //           break;
+  //     case  "cat":
+  //       document.write('miao!')
+  //           break;
+  //     case  "mouse":
+  //       document.write('zhi!')
+  //           break;
+  //   }
+  // }
+  // scream('dog');
+  // scream('cat');
+  // scream('mouse');
+
+  //函数之转换数字
+  // function  reserve(){
+  //   var num = window.prompt('请输入数字');
+  //   var str = "";
+  //   for (var i = num.length - 1;i >= 0;i --) {
+  //     str += transfer(num[i]) ;
+  //   }
+  //   document.write(str);
+  // }
+  // function transfer (target){
+  //  switch (target){
+  //    case "1":
+  //      return "一";
+  //    case "2":
+  //      return "二";
+  //    case "3":
+  //      return "三";
+  //    case "4":
+  //      return "四";
+  //    case "5":
+  //      return "五";
+  //    case "6":
+  //      return "六";
+  //    case "7":
+  //      return "七";
+  //    case "8":
+  //      return "八";
+  //    case "9":
+  //      return "九";
+  //    case "0":
+  //      return "零";
+  //  }
+  // }
+  // reserve();
+
+  //函数之阶乘
+  // function mul(n){
+  //   if (n == 1 || n ==0) {
+  //     return 1;   //return可以结束程序运行
+  //   }
+  //   return n * mul(n - 1);
+  // }
+  // var x=window.prompt('请输入数字');
+  // document.write(mul(x));
+
+
+  //scope 作用域
+  // function a(){
+  //   function b(){
+  //     var bb = 234;
+  //     aa = 0;
+  //     console.log(bb);
+  //   }
+  //   var aa = 123;
+  //   b();
+  //   console.log(aa);
+  // }
+  // var glob = 100;
+  // a();
+
+  //立即执行函数
+  // function  a(){
+  //   function b(){
+  //     var bbb = 234;
+  //     document.write(aaa);
+  //   }
+  //   var aaa = 123;
+  //   return b;
+  // }
+  // var  glob = 100;
+  // var demo = a();
+  // demo();
+
+  //闭包
+  // function  test() {
+  //   var arr = [];
+  //   for(var i= 0;i < 10;i ++) {
+  //     arr[i] = function () {
+  //       document.write( i + " "); //内容不执行
+  //     }
+  //   }
+  //   return arr;
+  // }
+  // var myArr = test();
+  // for(var j = 0;j < 10;j ++){
+  //   myArr[j]();
+  // }
+
+  //闭包
+  function  test() {
+    var arr = [];
+    for(var i = 0; i < 10;i ++) {
+
+
+      arr[i] = function (){
+        console.log(i);
+      }
+    }
+    return arr;
+  }
+  var myArr = test();
+  for(var j = 0;j <10; j ++){
+    myArr[j]();
+  }
+
+
+
+</script>
+</html>
