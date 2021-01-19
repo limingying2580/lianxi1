@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+  <cpn> <button slot="center">按钮</button></cpn>
+  <cpn><span slot="left">啊？</span></cpn>
+  <cpn><i slot="right">哦哦哦哦哦哦</i></cpn>
+  <cpn> <button slot="left">按钮</button></cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    <h2>我是组件</h2>
+    <p>我是组件，哈哈哈哈</p>
+    <slot name="left"><span>左边</span></slot>  <!--如果没传作为默认值-->
+    <slot name="center"><span>中间</span></slot>
+    <slot name="right"><span>右边</span></slot>
+  </div>
+</template>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '今天天气很好',
+    },
+    components: {
+      cpn: {
+        template: '#cpn',
+      }
+    }
+  })
+</script>
+</body>
+</html>

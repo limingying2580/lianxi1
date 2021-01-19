@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+<cpn :cmovies="movies" :cmessage="messages"></cpn>  <!--父子组件中数据对应-->
+</div>
+
+<template id="cpn">
+  <div>
+    <ul>
+      <li v-for="item in cmovies">{{item}}</li>
+    </ul>
+    <p>{{cmovies}}</p>
+    <p>{{cmessage}}</p>
+  </div>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const cpn = {
+    template: '#cpn',
+    // props:['cmovies','cmessage'],  //将数据传递给子组件
+
+    props: {
+      // cmovies: Array,
+      // cmessage:String,
+
+      cmessage: {
+        type: String,
+        default: '今天天气很好',  //没有传值时显示默认值
+        // required:true,   //表示必传
+      },
+      cmovies: {
+        type:Array,
+        // default: [], //vue2.5以下不报错，默认值必须是一个函数
+        default(){
+          return []
+                  }
+      }
+    },
+    data(){
+      return{}
+    },
+    methods: {
+
+    }
+  }
+  const app = new Vue({   //vue实例作为父组件
+    el: '#app',
+    data: {
+      messages: '你好',  //若没定义时默认值起作用
+      movies:['海王','海贼王','海尔兄弟'],
+    },
+    components: {
+      // 'cpn': {
+      //
+      // }
+      cpn
+    }
+  })
+</script>
+</body>
+</html>

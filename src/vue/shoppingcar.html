@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="(item,index) in movies" :class="{active:currentIndex === index}" @click="liClick(index)">{{item}}</li>
+  </ul>
+
+  <div v-if="books.length">
+    <table class="table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>书籍名称</th>
+        <th>出版日期</th>
+        <th>价格</th>
+        <th>购买数量</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr v-for="(item,index) in books">
+        <td >{{item.id}}</td>
+        <td >{{item.name}}</td>
+        <td >{{item.date}}</td>
+        <td >￥ {{item.price.toFixed(2)}}</td><!--保留两位小数toFixed-->
+        <td >
+          <button @click="sub(index)">-</button>
+          {{item.num}}
+          <button @click="increment(index)">+</button>
+        </td>
+        <td>
+          <button @click="remove(index)">移除</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div >总价格：￥{{counter}}</div>
+  </div>
+  <h2 v-else>购物车为空</h2>
+</div>
+
+<script src="../js/aaa.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const app =new Vue({
+    el:'#app',
+    data: {
+      movies: ['小红帽','白雪公主','冰雪奇缘','龙猫'],
+      currentIndex:0,
+
+      books: [
+        {id:1,name:'《算法导论》',date:2006-9,price:85,num:1},
+        {id:2,name:'《UNIX编程艺术》',date:2006-2,price:59,num:1},
+        {id:3,name:'《编程珠玑》',date:2008-10,price:39,num:1},
+        {id:4,name:'《代码大全》',date:2006-3,price:128,num:1}
+      ],
+      count:0,
+    },
+    computed:{
+      counter(){
+        let sum = this.count;
+        for(let i = 0;i < this.books.length;i++){
+          sum += this.books[i].num * this.books[i].price;
+        }
+        return sum;
+      },
+
+      // 高阶计算方式
+      // const nums = [10,20,111,222,444,50,40];
+      // let total = nums.filter(function (n){    filter过滤小于100的数
+      //   return n<100
+      // }).map(function (n){          map将过滤出来的数乘2
+      //   return n * 2
+      // }).reduce(function (preValue,n){
+      //   return preValue + n        reduce计算累加和
+      // },0)
+    },
+    methods:{
+      liClick(index){
+        this.currentIndex =index;
+      },
+      increment(index){
+        this.books[index].num++;
+      },
+
+      sub(index){
+        if(this.books[index].num >0){
+          this.books[index].num--;
+        }
+       else{
+          window.alert("不能再减啦！！");
+        }
+      },
+      remove(index){
+        this.books.splice(index,1);
+      },
+
+
+
+    }
+  })
+</script>
+</body>
+<style>
+  .active{
+    color:red;
+  }
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  table ,th, td {
+    border: 1px solid black;
+    height: 15px;
+    padding: 10px;
+  }
+  td
+  {
+    text-align: center;
+  }
+  thead:first-child{
+    background-color: #999999;
+  }
+</style>
+</html>

@@ -148,20 +148,33 @@
   // }
 
   //闭包
-  function  test() {
-    var arr = [];
-    for(var i = 0; i < 10;i ++) {
+  // function  test() {
+  //   var arr = [];
+  //   for(var i = 0; i < 10;i ++) {
+  //
+  //
+  //     arr[i] = function (){
+  //       console.log(i);
+  //     }
+  //   }
+  //   return arr;
+  // }
+  // var myArr = test();
+  // for(var j = 0;j <10; j ++){
+  //   myArr[j]();
+  // }
 
+  //计数字符长度
+  var str = "abcd李";
 
-      arr[i] = function (){
-        console.log(i);
+  function bytesLength(str) {
+    var count = str.length;
+    for(var i = 0;i < str.length;i ++){
+      if(str.charCodeAt(i)>255){
+        count ++;
       }
     }
-    return arr;
-  }
-  var myArr = test();
-  for(var j = 0;j <10; j ++){
-    myArr[j]();
+    return count;
   }
 
 

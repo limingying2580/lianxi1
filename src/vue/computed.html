@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>总价格：{{totalPrice}}</h2> <!-- 计算属性中函数不需要加（），有缓存-->
+  <div>{{fullName}}</div>
+  <button @click="btnClick()">按钮1</button>
+  <button>按钮2</button>
+  <button>按钮3</button>
+  <input type="text" @keyup="keyUp">
+  <div>
+  <span v-if="isUser">
+    <label for="username">用户账号</label>
+    <input type="text" id="username" placeholder="请输入用户账号" key="username"> <!--key解决输入框被复用问题 -->
+  </span>
+  <span v-else="">
+  <label for="useremail">用户邮箱</label>   <!--  其中for可以起到点击文字聚焦输入框-->
+    <input type="text" id="useremail" placeholder="请输入用户邮箱" key="useremail">
+  </span>
+  <button @click="isUser=!isUser">切换类型</button>
+  </div>
+  <div>
+    <ul>
+      <li v-for="item in names">{{item}}</li>
+    </ul>
+
+    <ul>
+      <li v-for="(item,index) in names">{{index+1}}.{{item}}</li>
+    </ul>
+  </div>
+
+<!--  获取value和key-->
+  <div>
+    <ul>
+      <li v-for="(value,key) in info">{{key}}-{{value}}</li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li v-for="item in letters" :key="item">{{item}}</li>  <!--增加相同数据会报错，因为key=item，item相同-->
+    </ul>
+    <button @click="add()">按钮</button>
+  </div>
+
+  <div>
+<!--    <input type="text" v-model="message">{{message}}-->
+
+<!--    <input type="text" :value="message" v-on:input="valueChange">-->
+    <input type="text" :value="message" @input="valueChange"><!--监听input的值-->
+    <h2>{{message}}</h2>
+  </div>
+
+<!--  单选按钮-->
+  <div>
+    <label for="male">
+      <input type="radio" id="male" name="sex" value="男" v-model="sex">男    <!-- 其中name做到按钮互斥,有v-model时可不使用name-->
+    </label>
+    <label for="female">
+      <input type="radio" id="female" name="sex" value="女" v-model="sex">女
+    </label>
+    <h4>您选择的性别是：{{sex}}</h4>
+  </div>
+
+<!--  复选框-->
+  <div>
+    <label for="agree">
+      <input type="checkbox" id="agree" v-model="isAgree">同意协议
+    </label>
+    <h4>您的选择是：{{isAgree}}</h4>
+    <button :disabled="!isAgree">下一步</button>
+  </div>
+
+  <div>
+    <input type="checkbox" value="篮球" v-model="hobbies">篮球
+    <input type="checkbox" value="足球" v-model="hobbies">足球
+    <input type="checkbox" value="乒乓球" v-model="hobbies">乒乓球
+    <input type="checkbox" value="羽毛球" v-model="hobbies">羽毛球
+    <h4>您的爱好是：{{hobbies}}</h4>
+  </div>
+
+  <div>
+    <my-cpn></my-cpn>
+    <my-cpn></my-cpn>
+    <my-cpn></my-cpn>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+  //组件 1.创造组件构造器对象   全局组件，可在多个vue实例下使用
+  const cpnC = Vue.extend({
+    template:`<div>
+                <h2>我是组件</h2>
+                <p>哈哈哈</p>
+                <p>嘿嘿嘿</p>
+              </div>`
+
+    })
+
+  //2.注册组件
+  Vue.component(`my-cpn`,cpnC)
+
+  //语法糖，无1，直接2
+  // Vue.component(`my-cpn`,{
+  //   template:`<div>
+  //               <h2>我是组件</h2>
+  //               <p>哈哈哈</p>
+  //               <p>嘿嘿嘿</p>
+  //             </div>`
+  //
+  // })
+
+  const app = new Vue({
+    el :'#app',
+    data: {
+      books:[
+        {id: 110,name: '好好学习',price: 119},
+        {id: 111,name: '天天向上',price: 108},
+        {id: 112,name: '啊啊啊啊',price: 120},
+        {id: 113,name: '哈哈哈哈',price: 156}
+      ],
+      firstName: '奥黛丽',
+      lastName: '赫本',
+      isUser: true,
+      names:['张三','李四','王五','赵六'],
+      info:{
+        name: '小白',
+        age: 18,
+        height: 165,
+        weight:100,
+      },
+      letters:['A','B','C','D','E',],
+      message:'哈哈哈',
+      sex:'男', //默认被选中是男
+      isAgree:false,
+      hobbies:[ ],
+    },
+
+    //局部组件
+    components:{
+      cpn: cpnC
+    },
+  computed: {  //计算属性
+      totalPrice: function (){
+        let result = 0
+        //for(let i in this.books)
+        //for(let book of this.books)  es6简洁语法
+        for(let i = 0;i < this.books.length;i++){
+          result += this.books[i].price;
+        }
+        return result;
+      },
+    fullName:{
+    set: function (newValue) { //可省不写
+      const names =newValue.split(' ')
+      this.firstName = names[0];
+      this.lastName = names[1];
+    },
+    get: function (){   //相当于get()
+        return this.firstName +' '+this.lastName;
+      }
+    },
+  },
+  methods: {
+    btnClick(){
+      console.log('click')
+    },
+    keyUp() {
+      console.log('按键')
+    } ,
+    add(){
+      this.letters.push('a')
+      // this.letters.splice(start,num,change)
+    },
+    valueChange(event){
+      this.message = event.target.value;
+    }
+
+    }
+  })
+</script>
+</body>
+</html>

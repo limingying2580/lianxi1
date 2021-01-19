@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<div id="app">
+  <cpn :number1="num1" :number2="num2" @num1change="num1change"></cpn> <!-- 直接绑定子组件中数据会报错，使用data来解决-->
+</div>
+
+<template id="cpn">
+  <div>
+  <h2>props：{{number1}}</h2>
+  <h2>data：{{dnumber1}}</h2>
+<!--  <input type="text" v-model="number1">-->
+<!--  <input type="text" v-model="dnumber1">-->
+    <!-- 将子组件改变的值传回给父组件,两种写法-->
+<!--    <input type="text" v-bind:value="dnumber1" @input="dnumber1=$event.target.value">   -->
+    <input type="text" v-bind:value="dnumber1" @input="num1Iuput">
+  <h2>props：{{number2}}</h2>
+  <h2>data：{{dnumber2}}</h2>
+  <input type="text" v-model="number2">
+  <input type="text" v-model="dnumber2">
+  </div>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el:'#app',
+    data: {
+      num1: 1,
+      num2: 0,
+    },
+    methods: {
+      num1change(value){
+        // this.num1 = parseFloat(value)   改变类型
+        this.num1 = value * 1; //传递的是string类型
+      }
+    },
+    components: {
+      cpn: {
+        template: '#cpn',
+        props: {
+          number1: Number,
+          number2: Number,
+        },
+        data(){
+          return {
+            dnumber1: this.number1,
+            dnumber2: this.number2,
+          }
+        },
+        methods: {
+          num1Iuput(event){
+            this.dnumber1 = event.target.value
+            this.$emit('num1change',this.dnumber1)
+          }
+        }
+      },
+
+    }
+  })
+</script>
+</body>
+</html>
